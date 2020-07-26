@@ -20,8 +20,14 @@
         <property name="password" value="tiger"></property>
     </bean>
     
-      <!-- mybatis SqlSessionFactoryBean -->
+    <!-- MyBatis SqlSessionFactoryBean -->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="configLocation" value="classpath:mybatis-config.xml"></property>
         <property name="dataSource" ref="dataSource"></property>
+        <property name="mapperLocations" value="classpath:mappers/**/*.xml"></property>
+    </bean>
+        
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.spring.leeyc" />
     </bean>
 </beans>

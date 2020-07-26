@@ -1,8 +1,17 @@
 package com.spring.leeyc.board.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.spring.leeyc.board.dao.BoardDao;
 
 @Service
 public class BoardService {
 
+	@Autowired
+	private BoardDao boardDao;
+	
+	public String selectNow(){
+		return boardDao.selectNow();
+	}
 }
