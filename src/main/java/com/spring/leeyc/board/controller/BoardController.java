@@ -23,7 +23,7 @@ public class BoardController {
 	@RequestMapping("/")
 	public ModelAndView selList() throws Exception {
 		ModelAndView mv =new ModelAndView();
-		mv.setViewName("main");
+		mv.setViewName("main"); 
 		mv.addObject("data",service.selList());
 		return mv;
 	}
