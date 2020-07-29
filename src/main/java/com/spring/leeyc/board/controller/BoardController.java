@@ -24,7 +24,7 @@ public class BoardController {
 	public ModelAndView selList() throws Exception {
 		ModelAndView mv =new ModelAndView();
 		mv.setViewName("main"); 
-		mv.addObject("data",service.selList());
+		mv.addObject("list",service.selList());
 		return mv;
 	}
 

@@ -1,8 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"   isELIgnored="false"%>
-
-<%
-  request.setCharacterEncoding("UTF-8");
-%>    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <!DOCTYPE html>
 <html>
@@ -13,29 +12,24 @@
 <body>
     <table border = "1" style = "text-align : center">
    		<tr>
-   			<td style ="width : 300px; height : 100px;" colspan = 3>동한이의 다짐 목록 </td>
+   			<td style ="width : 300px; height : 100px;" colspan = 4>동한이의 다짐 목록 </td>
    			<td style ="width : 200px; height : 100px;">추가</td>
    		</tr>
+   		
    		<tr>
    			<td style ="width : 100px; height : 100px;"> 번호 </td>
    			<td style ="width : 400px; height : 100px;"> 목록 </td>
    			<td style ="width : 200px; height : 100px;"> 등록일</td>
+   			<td style ="width : 200px; height : 100px;"> 수정일</td>
    		</tr>
-   		<tr>
-   			<td style ="width : 100px; height : 100px;"> 1 </td>
-   			<td style ="width : 400px; height : 100px;"> 영어공부 </td>
-   			<td style ="width : 200px; height : 100px;"> 2020-07-22 </td>
-   		</tr>
-   		<tr>
-   			<td style ="width : 100px; height : 100px;"> 2 </td>
-   			<td style ="width : 400px; height : 100px;"> 해외영업 </td>
-   			<td style ="width : 200px; height : 100px;"> 2020-07-22 </td>
-   		</tr>
-   		<tr>
-   			<td style ="width : 100px; height : 100px;"> 3 </td>
-   			<td style ="width : 400px; height : 100px;"> 프로게이머 </td>
-   			<td style ="width : 200px; height : 100px;"> 2020-07-22 </td>
-   		</tr>
-   </table>
+   		<c:forEach items = "${list}" var = "list">
+   			<tr>
+   				<td style ="width : 100px; height : 100px;"><c:out value="${list.seqno}"/></td>
+   				<td style ="width : 400px; height : 100px;"><c:out value="${list.promise}"/></td>
+   				<td style ="width : 200px; height : 100px;"><c:out value="${list.ins_dt}"/></td>
+   				<td style ="width : 200px; height : 100px;"><c:out value="${list.ups_dt}"/></td>
+   			</tr>
+		</c:forEach>
+	</table>
 </body>
 </html>
