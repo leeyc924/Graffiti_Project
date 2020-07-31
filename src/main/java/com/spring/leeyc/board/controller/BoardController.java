@@ -34,7 +34,7 @@ public class BoardController {
 	@RequestMapping("/write")
 	public ModelAndView insPromise(HttpServletRequest req,HttpServletResponse res) throws Exception {
 		ModelAndView mv = new ModelAndView();
-//		req.getParameter("promise");
+//		req.getParameter("promise"); 
 		mv.setViewName("/board/list"); 
 		return mv;
 	}
