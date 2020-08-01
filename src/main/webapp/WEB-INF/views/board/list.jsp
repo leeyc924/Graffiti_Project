@@ -14,7 +14,7 @@
    		<tr>
    			<td style ="width : 300px; height : 100px;" colspan = 4>동한이의 다짐 목록 </td>
    			<td style ="width : 200px; height : 100px;">
-   			<a href="board/writeView"> 추가 </a>
+   			<a href="/writeView"> 추가 </a>
    			</td>
    		</tr>
    		
