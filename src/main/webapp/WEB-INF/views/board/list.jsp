@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-
+<c:set var="contextPath" value="${pageContext.request.contextPath}" /> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +14,7 @@
    		<tr>
    			<td style ="width : 300px; height : 100px;" colspan = 4>동한이의 다짐 목록 </td>
    			<td style ="width : 200px; height : 100px;">
-   			<a href="/writeView"> 추가 </a>
+   			<a href="${contextPath}/board/writeView"> 추가 </a>
    			</td>
    		</tr>
    		

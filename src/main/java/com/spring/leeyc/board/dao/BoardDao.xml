@@ -7,8 +7,8 @@
         SELECT
    			seqno,
         	promise,
-        	DATE_FORMAT(ins_dt,"%Y.%c.%e %I:%i"),
-        	DATE_FORMAT(ups_dt,"%Y.%c.%e %I:%i")
+        	ins_dt,
+        	upt_dt
         FROM
         	promise_note
     </select>
