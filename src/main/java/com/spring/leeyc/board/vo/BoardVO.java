@@ -4,7 +4,7 @@ public class BoardVO {
 	private Integer seqno;
 	private String promise;
 	private String ins_dt;
-	private String ups_dt;
+	private String upt_dt;
 
 	public Integer getSeqno() {
 		return seqno;
@@ -31,10 +31,10 @@ public class BoardVO {
 	}
 
 	public String getUps_dt() {
-		return ups_dt;
+		return upt_dt;
 	}
 
-	public void setUps_dt(String ups_dt) {
-		this.ups_dt = ups_dt;
+	public void setUps_dt(String upt_dt) {
+		this.upt_dt = upt_dt;
 	}
 }

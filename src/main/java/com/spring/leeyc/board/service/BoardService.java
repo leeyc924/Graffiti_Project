@@ -20,7 +20,7 @@ public class BoardService {
 	}
 	
 	// 다짐 조회
-	public void insPromise(String promise) throws Exception{
-		boardDao.insPromise(promise);
+	public void insPromise(BoardVO boardVO) throws Exception{
+		boardDao.insPromise(boardVO);
 	}
 }

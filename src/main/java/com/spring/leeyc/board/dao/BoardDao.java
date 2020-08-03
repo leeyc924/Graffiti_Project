@@ -13,6 +13,6 @@ public interface BoardDao {
 	public List<BoardVO> listPromise() throws Exception;
 	
 	// 다짐 추가
-	public void insPromise(String promise) throws Exception;
+	public void insPromise(BoardVO boradVO) throws Exception;
 	
 }

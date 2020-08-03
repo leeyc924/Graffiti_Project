@@ -7,8 +7,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import com.spring.leeyc.board.service.BoardService;
+import com.spring.leeyc.board.vo.BoardVO;
 
 @Controller
 public class BoardController {
@@ -26,16 +28,14 @@ public class BoardController {
 		return mv;
 	}
 	
-	@RequestMapping("/board/writeView")
+	@RequestMapping(value = "/board/writeView", method = RequestMethod.GET)
 	public String writePromise() throws Exception {
 		return "board/writeView";
 	}
 	
-	@RequestMapping("/write")
-	public ModelAndView insPromise(HttpServletRequest req,HttpServletResponse res) throws Exception {
-		ModelAndView mv = new ModelAndView();
-//		req.getParameter("promise"); 
-		mv.setViewName("/board/list"); 
-		return mv;
+	@RequestMapping(value = "/board/write", method = RequestMethod.POST)
+	public String insPromise(BoardVO boardVO) throws Exception {
+		service.insPromise(boardVO);
+		return "redirect:/board/list";
 	}
 }

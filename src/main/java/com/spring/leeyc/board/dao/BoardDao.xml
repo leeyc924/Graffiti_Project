@@ -13,13 +13,13 @@
         	promise_note
     </select>
     <!-- 다짐 추가 -->
-    <insert id="insPromise" parameterType ="String">
+    <insert id="insPromise" parameterType ="com.spring.leeyc.board.vo.BoardVO">
     	INSERT
     	INTO promise_note(
     		promise
     	)
     	VALUES(
-    		:promise:
+    		#{promise}
     	)
     </insert>
 </mapper>

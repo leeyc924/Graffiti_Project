@@ -18,12 +18,12 @@
 			</tr>
 			<tr>
 				<td style="width: 300px; height: 100px;">
-				<input type="text" name="promise" value="promise"></td>
+				<input type="text" name="promise" ></td>
 			</tr>
 			<tr>
 			</tr>
 		</table>
-    			<input type="submit">
+    			<button type="submit">작성</button>
 	</form>
 </body>
 </html>
