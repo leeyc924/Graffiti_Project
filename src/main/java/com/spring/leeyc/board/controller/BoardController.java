@@ -28,7 +28,7 @@ public class BoardController {
 		return mv;
 	}
 	
-	@RequestMapping(value = "/board/writeView", method = RequestMethod.GET)
+	@RequestMapping("/board/writeView")
 	public String writePromise() throws Exception {
 		return "board/writeView";
 	}
