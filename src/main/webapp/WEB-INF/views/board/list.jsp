@@ -28,7 +28,7 @@
 				</td>
 				<td style="width: 400px; height: 100px;">
 					목록
-				</td>
+				</td> 
 				<td style="width: 200px; height: 100px;">
 					등록일
 				</td>
