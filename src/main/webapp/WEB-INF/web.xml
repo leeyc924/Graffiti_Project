@@ -30,6 +30,7 @@
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 
+	<!-- 한글깨지지 않게 방지 -->
 	<filter>
         <filter-name>encodingFilter</filter-name>
         <filter-class>

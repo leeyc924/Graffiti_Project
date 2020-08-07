@@ -1,7 +1,5 @@
 package com.spring.leeyc.board.controller;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +10,10 @@ import org.springframework.web.servlet.ModelAndView;
 import com.spring.leeyc.board.service.BoardService;
 import com.spring.leeyc.board.vo.BoardVO;
 
+/**
+ * 다짐 Controller
+ * @author leeyc
+ */
 @Controller
 public class BoardController {
 
@@ -20,21 +22,27 @@ public class BoardController {
 	@Autowired
 	BoardService service;
 	
+	// 다짐 목록
 	@RequestMapping("/board/list")
 	public ModelAndView listPromise() throws Exception {
+		logger.info("list");
 		ModelAndView mv =new ModelAndView();
 		mv.setViewName("board/list"); 
 		mv.addObject("list",service.listPromise());
 		return mv;
 	}
 	
+	// 다짐 등록 jsp 이동
 	@RequestMapping("/board/writeView")
 	public String writePromise() throws Exception {
+		logger.info("writeView");
 		return "board/writeView";
 	}
 	
+	// 다짐 등록
 	@RequestMapping(value = "/board/write", method = RequestMethod.POST)
 	public String insPromise(BoardVO boardVO) throws Exception {
+		logger.info("write");
 		service.insPromise(boardVO);
 		return "redirect:/board/list";
 	}
