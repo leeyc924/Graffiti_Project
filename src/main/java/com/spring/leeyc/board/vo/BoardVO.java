@@ -1,9 +1,13 @@
 package com.spring.leeyc.board.vo;
 
+import java.util.Date;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
 public class BoardVO {
 	private Integer seqno;
 	private String promise;
-	private String ins_dt;
+	private Date ins_dt;
 	private String ups_dt;
 
 	public Integer getSeqno() {
@@ -22,11 +26,11 @@ public class BoardVO {
 		this.promise = promise;
 	}
 
-	public String getIns_dt() {
+	public Date getIns_dt() {
 		return ins_dt;
 	}
 
-	public void setIns_dt(String ins_dt) {
+	public void setIns_dt(Date ins_dt) {
 		this.ins_dt = ins_dt;
 	}
 

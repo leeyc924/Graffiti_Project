@@ -14,7 +14,13 @@ public class BoardService {
 	@Autowired
 	private BoardDao boardDao;
 	
-	public List<BoardVO> selList() throws Exception{
-		return boardDao.selList();
+	// 다짐 목록
+	public List<BoardVO> listPromise() throws Exception{
+		return boardDao.listPromise();
+	}
+	
+	// 다짐 조회
+	public void insPromise(String promise) throws Exception{
+		boardDao.insPromise(promise);
 	}
 }

@@ -2,7 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
  
 <mapper namespace="com.spring.leeyc.board.dao.BoardDao">
-    <select id="selList" resultType="com.spring.leeyc.board.vo.BoardVO">
+    <!-- 다짐 목록 -->
+    <select id="listPromise" resultType="com.spring.leeyc.board.vo.BoardVO">
         SELECT
    			seqno,
         	promise,
@@ -11,4 +12,14 @@
         FROM
         	promise_note
     </select>
+    <!-- 다짐 추가 -->
+    <insert id="insPromise" parameterType ="String">
+    	INSERT
+    	INTO promise_note(
+    		promise
+    	)
+    	VALUES(
+    		:promise:
+    	)
+    </insert>
 </mapper>

@@ -8,5 +8,11 @@ import com.spring.leeyc.board.vo.BoardVO;
 
 @Repository
 public interface BoardDao {
-	public List<BoardVO> selList() throws Exception;
+	
+	// 다짐 목록
+	public List<BoardVO> listPromise() throws Exception;
+	
+	// 다짐 추가
+	public void insPromise(String promise) throws Exception;
+	
 }
