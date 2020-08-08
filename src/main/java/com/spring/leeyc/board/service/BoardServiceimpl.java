@@ -22,10 +22,16 @@ public class BoardServiceimpl implements BoardService {
 	public List<BoardVO> listPromise() throws Exception {
 		return boardDao.listPromise();
 	}
-
+	
+	// 다짐 상세 조회
+	@Override
+	public List<BoardVO> readPromise(int seqno) throws Exception {
+		return boardDao.readPromise(seqno);
+	}
 	// 다짐 등록
 	@Override
 	public void insPromise(BoardVO boardVO) throws Exception {
 		boardDao.insPromise(boardVO);
 	}
+
 }

@@ -32,6 +32,16 @@ public class BoardController {
 		return mv;
 	}
 	
+	// 다짐 목록 상세조회
+	@RequestMapping("/board/readView")
+	public ModelAndView readPromise(BoardVO boardVO) throws Exception{
+		logger.info("readView");
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("board/readView");
+		mv.addObject("list",service.readPromise(boardVO.getSeqno()));
+		return mv;
+	}
+	
 	// 다짐 등록 jsp 이동
 	@RequestMapping("/board/writeView")
 	public String writePromise() throws Exception {

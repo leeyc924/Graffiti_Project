@@ -7,16 +7,16 @@ import java.util.Date;
  * @author leeyc
  */
 public class BoardVO {
-	private Integer seqno;	// 일련번호
+	private int seqno;	// 일련번호
 	private String promise;	// 다짐
 	private Date ins_dt;	// 등록일
 	private Date upt_dt;	// 수정일
 
-	public Integer getSeqno() {
+	public int getSeqno() {
 		return seqno;
 	}
 
-	public void setSeqno(Integer seqno) {
+	public void setSeqno(int seqno) {
 		this.seqno = seqno;
 	}
 

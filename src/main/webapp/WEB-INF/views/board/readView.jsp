@@ -8,55 +8,58 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>메인 페이지</title>
+	<title>다짐</title>
 </head>
 <body>
 	<table border="1" style="text-align: center">
 		<thead>
 			<tr>
-				<td style="width: 300px; height: 100px;" colspan=4>
-					동한이의 다짐 목록
-				</td>
-				<td style="width: 200px; height: 100px;">
-					<a href="${contextPath}/board/writeView"> 추가 </a>
+				<td style="width: 300px; height: 100px;" colspan=2>
+					다짐
 				</td>
 			</tr>
-
+		</thead>
+		<tbody>
 			<tr>
 				<td style="width: 100px; height: 100px;">
 					번호
 				</td>
 				<td style="width: 400px; height: 100px;">
-					목록
+					<c:out value="${list.seqno}" />
 				</td> 
+			</tr>
+			<tr>
+				<td style="width: 100px; height: 100px;">
+					내용
+				</td>
+				<td style="width: 400px; height: 100px;">
+					<c:out value="${list.promise}"/>
+				</td> 
+			</tr>
+			<tr>
+				<td style="width: 100px; height: 100px;">
+					등록일
+				</td>
+				<td style="width: 400px; height: 100px;">
+					<c:out value="${list.promise}"/>
+				</td> 
+			</tr>
+			<tr>
 				<td style="width: 200px; height: 100px;">
 					등록일
 				</td>
 				<td style="width: 200px; height: 100px;">
+					<fmt:formatDate value="${list.ins_dt}" pattern="yyyy-MM-dd" />
+				</td>
+			</tr>
+			<tr>
+				<td style="width: 200px; height: 100px;">
 					수정일
 				</td>
 				<td style="width: 200px; height: 100px;">
-					<a href="javascript:void(0);"> 삭제 </a>
+					<fmt:formatDate value="${list.upt_dt}" pattern="yyyy-MM-dd" />
 				</td>
 			</tr>
-		</thead>
-		<tbody>
-			<c:forEach items="${list}" var="list">
-				<tr>
-					<td style="width: 100px; height: 100px;">
-						<c:out value="${list.seqno}" />
-					</td>
-					<td style="width: 400px; height: 100px;">
-						<a href="${contextPath}/board/readView?seqno=${list.seqno}"><c:out value="${list.promise}"/></a>
-					</td>
-					<td style="width: 200px; height: 100px;">
-						<fmt:formatDate value="${list.ins_dt}" pattern="yyyy-MM-dd" />
-					</td>
-					<td style="width: 200px; height: 100px;">
-						<fmt:formatDate value="${list.upt_dt}" pattern="yyyy-MM-dd" />
-					</td>
-				</tr>
-			</c:forEach>
 		</tbody>
 	</table>
 </body>
