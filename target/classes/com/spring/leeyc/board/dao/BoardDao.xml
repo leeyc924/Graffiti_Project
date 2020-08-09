@@ -15,7 +15,7 @@
     </select>
     
     <!-- 다짐 상세 조회 -->
-    <select id="readPromise" resultType="com.spring.leeyc.board.vo.BoardVO">
+    <select id="readPromise" parameterType="int" resultType="com.spring.leeyc.board.vo.BoardVO">
         SELECT
    			seqno,
         	promise,
