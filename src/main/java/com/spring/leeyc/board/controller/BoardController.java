@@ -38,7 +38,7 @@ public class BoardController {
 		logger.info("readView");
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("board/readView");
-		mv.addObject("list",service.readPromise(boardVO.getSeqno()));
+		mv.addObject("read",service.readPromise(boardVO.getSeqno()));
 		return mv;
 	}
 	

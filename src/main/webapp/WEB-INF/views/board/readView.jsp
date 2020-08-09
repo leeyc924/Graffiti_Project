@@ -21,43 +21,18 @@
 		</thead>
 		<tbody>
 			<tr>
-				<td style="width: 100px; height: 100px;">
-					번호
-				</td>
-				<td style="width: 400px; height: 100px;">
-					<c:out value="${list.seqno}" />
-				</td> 
-			</tr>
-			<tr>
-				<td style="width: 100px; height: 100px;">
-					내용
-				</td>
-				<td style="width: 400px; height: 100px;">
-					<c:out value="${list.promise}"/>
-				</td> 
-			</tr>
-			<tr>
-				<td style="width: 100px; height: 100px;">
-					등록일
-				</td>
-				<td style="width: 400px; height: 100px;">
-					<c:out value="${list.promise}"/>
-				</td> 
-			</tr>
-			<tr>
-				<td style="width: 200px; height: 100px;">
-					등록일
-				</td>
-				<td style="width: 200px; height: 100px;">
-					<fmt:formatDate value="${list.ins_dt}" pattern="yyyy-MM-dd" />
+				<td style="width: 100px; height: 100px;"><label for="seqno">번호</label>
+					<input type="text" id="seqno" name="seqno" value="${read.seqno}">
 				</td>
 			</tr>
 			<tr>
-				<td style="width: 200px; height: 100px;">
-					수정일
+				<td style="width: 100px; height: 100px;"><label for="seqno">내용</label>
+					<input type="text" id="promise" name="promise" value="${read.promise}">
 				</td>
-				<td style="width: 200px; height: 100px;">
-					<fmt:formatDate value="${list.upt_dt}" pattern="yyyy-MM-dd" />
+			</tr>
+			<tr>
+				<td style="width: 100px; height: 100px;"><label for="seqno">등록일</label>
+					<fmt:formatDate value="${read.ins_dt}" pattern="yyyy-MM-dd" />
 				</td>
 			</tr>
 		</tbody>
