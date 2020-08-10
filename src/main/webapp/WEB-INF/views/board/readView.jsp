@@ -45,7 +45,7 @@
 					<a href="javascript:void(0);">수정</a>
 				</td>
 				<td style="width: 30px; height: 100px;">
-					<a href="javascript:void(0);">삭제</a>
+					<a href="${contextPath}/board/delete?seqno=${read.seqno}">삭제</a>
 				</td>
 			</tr>
 		</tbody>

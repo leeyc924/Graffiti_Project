@@ -56,4 +56,12 @@ public class BoardController {
 		service.insPromise(boardVO);
 		return "redirect:/board/list";
 	}
+	
+	// 다짐 삭제
+	@RequestMapping("/board/delete")
+	public String delPromise(BoardVO boardVO) throws Exception{
+		logger.info("delete");
+		service.delPromise(boardVO.getSeqno());
+		return "redirect:/board/list";
+	}
 }

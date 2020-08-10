@@ -16,4 +16,7 @@ public interface BoardService {
 
 	// 다짐 등록
 	public void insPromise(BoardVO boardVO) throws Exception;
+
+	// 다짐 삭제
+	public void delPromise(int seqno) throws Exception;
 }

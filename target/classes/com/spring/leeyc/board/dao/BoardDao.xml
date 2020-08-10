@@ -37,4 +37,13 @@
     		#{promise}
     	)
     </insert>
+    
+    <!-- 다짐 삭제 -->
+    <delete id="delPromise" parameterType="int">
+    	DELETE
+    	FROM 
+    		promise_note
+    	WHERE
+    		seqno = #{seqno}
+    </delete>
 </mapper>

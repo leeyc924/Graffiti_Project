@@ -35,4 +35,9 @@ public class BoardServiceimpl implements BoardService {
 		boardDao.insPromise(boardVO);
 	}
 
+	@Override
+	public void delPromise(int seqno) throws Exception {
+		boardDao.delPromise(seqno);
+	}
+
 }
