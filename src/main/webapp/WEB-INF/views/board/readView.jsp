@@ -4,11 +4,21 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <c:set var="contextPath" value="${pageContext.request.contextPath}" />
+<script type="text/javascript" src="<c:url value="/resources/js/jQuery-3.5.1.js"/>"></script>
+<%-- <script src="${contextPath}/resources/js/jQuery-3.5.1.js"></script> --%>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
 	<title>다짐</title>
+	
+	<script>
+		$().ready(function(){
+			$("#delPromise").click(function(){
+				debugger;
+			});
+		});
+</script>
 </head>
 <body>
 	<table border="1" style="text-align: center">
@@ -45,7 +55,7 @@
 					<a href="javascript:void(0);">수정</a>
 				</td>
 				<td style="width: 30px; height: 100px;">
-					<a href="${contextPath}/board/delete?seqno=${read.seqno}">삭제</a>
+					<a id="delPromise" href="${contextPath}/board/delete?seqno=${read.seqno}">삭제</a>
 				</td>
 			</tr>
 		</tbody>

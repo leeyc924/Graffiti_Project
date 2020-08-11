@@ -31,4 +31,5 @@
         <property name="basePackage" value="com.spring.leeyc.**.dao" />
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
     </bean>
+
 </beans>
