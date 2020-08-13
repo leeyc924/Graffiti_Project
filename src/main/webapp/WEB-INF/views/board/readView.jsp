@@ -6,17 +6,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script type="text/javascript" src="<c:url value="/js/jquery-3.5.1.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/resources/js/jquery-3.5.1.js"/>"></script>
 	<meta charset="UTF-8">
 	<title>다짐</title>
 	
 	<script>
 		$(document).ready(function(){
 			$("#delPromise").click(function(){
-				debugger;
+				
 			});
 		});
-</script>
+	</script>
 </head>
 <body>
 	<table border="1" style="text-align: center">
