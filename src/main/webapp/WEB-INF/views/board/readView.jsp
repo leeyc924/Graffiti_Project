@@ -12,8 +12,11 @@
 	
 	<script>
 		$(document).ready(function(){
+			var formObj = $("form[name='readForm']");
 			$("#delPromise").click(function(){
-				
+				formObj.attr("action", "/board/delete");
+				formObj.attr("method", "post");
+				formObj.submit();
 			});
 		});
 	</script>
@@ -31,7 +34,9 @@
 			<tr>
 				<td style="width: 100px; height: 100px;" colspan=3>
 					<label for="seqno">번호</label>
-					<input type="text" id="seqno" name="seqno" value="${read.seqno}">
+					<form name="readForm" role="form" method="post">
+						<input type="text" id="seqno" name="seqno" value="${read.seqno}">
+					</form>
 				</td>
 			</tr>
 			<tr>
@@ -45,18 +50,12 @@
 					<label for="seqno">등록일</label> 
 					<fmt:formatDate value="${read.ins_dt}" pattern="yyyy-MM-dd" /></td>
 			</tr>
-			<tr>
-				<td style="width: 30px; height: 100px;">
-					<a href="${contextPath}/board/list">목록</a>
-				</td>
-				<td style="width: 30px; height: 100px;">
-					<a href="javascript:void(0);">수정</a>
-				</td>
-				<td style="width: 30px; height: 100px;">
-					<input type="button" id="delPromise" name="delPromise" value="삭제">
-				</td>
-			</tr>
-		</tbody>
+		</tbody>			
 	</table>
+	<div>
+		<button type="submit" id="list" class="list">목록</button>	
+		<button type="submit" id="update" class="update">수정</button>
+		<button type="submit" id="delPromise" class="delete">삭제</button>
+	</div>		
 </body>
 </html>

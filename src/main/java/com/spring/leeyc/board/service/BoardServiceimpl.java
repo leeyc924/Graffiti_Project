@@ -35,6 +35,7 @@ public class BoardServiceimpl implements BoardService {
 		boardDao.insPromise(boardVO);
 	}
 
+	// 다짐 삭제
 	@Override
 	public void delPromise(int seqno) throws Exception {
 		boardDao.delPromise(seqno);

@@ -58,7 +58,7 @@ public class BoardController {
 	}
 	
 	// 다짐 삭제
-	@RequestMapping("/board/delete")
+	@RequestMapping(value = "/board/delete", method = RequestMethod.POST)
 	public String delPromise(BoardVO boardVO) throws Exception{
 		logger.info("delete");
 		service.delPromise(boardVO.getSeqno());
