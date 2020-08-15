@@ -13,10 +13,24 @@
 	<script>
 		$(document).ready(function(){
 			var formObj = $("form[name='readForm']");
+			
 			$("#delPromise").click(function(){
 				formObj.attr("action", "/board/delete");
 				formObj.attr("method", "post");
 				formObj.submit();
+			});
+			
+			$("#uptPromise").click(function(){
+				var text = $('#uptPromise').html();
+				if (text == '수정'){
+					$('#delPromise').hide();
+					$('#promise').attr('readOnly',false);
+					$('#uptPromise').html('확인');
+				}else if(text == '확인'){					
+					formObj.attr("action", "/board/update");
+					formObj.attr("method", "get");
+					formObj.submit();
+				}
 			});
 		});
 	</script>
@@ -35,14 +49,14 @@
 				<td style="width: 100px; height: 100px;" colspan=3>
 					<label for="seqno">번호</label>
 					<form name="readForm" role="form" method="post">
-						<input type="text" id="seqno" name="seqno" value="${read.seqno}">
+						<input type="text" id="seqno" name="seqno" value="${read.seqno}" readOnly/>
 					</form>
 				</td>
 			</tr>
 			<tr>
 				<td style="width: 100px; height: 100px;" colspan=3>
 					<label for="seqno">내용</label>
-					<input type="text" id="promise" name="promise" value="${read.promise}">
+					<input type="text" id="promise" name="promise" value="${read.promise}" readOnly/>
 				</td>
 			</tr>
 			<tr>
@@ -50,11 +64,11 @@
 					<label for="seqno">등록일</label> 
 					<fmt:formatDate value="${read.ins_dt}" pattern="yyyy-MM-dd" /></td>
 			</tr>
-		</tbody>			
+		</tbody>
 	</table>
 	<div>
 		<button type="submit" id="list" class="list">목록</button>	
-		<button type="submit" id="update" class="update">수정</button>
+		<button type="submit" id="uptPromise" class="update">수정</button>
 		<button type="submit" id="delPromise" class="delete">삭제</button>
 	</div>		
 </body>

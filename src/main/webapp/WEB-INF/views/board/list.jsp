@@ -35,9 +35,6 @@
 				<td style="width: 200px; height: 100px;">
 					수정일
 				</td>
-				<td style="width: 200px; height: 100px;">
-					<a href="javascript:void(0);"> 삭제 </a>
-				</td>
 			</tr>
 		</thead>
 		<tbody>
