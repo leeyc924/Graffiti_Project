@@ -28,7 +28,7 @@
 					$('#uptPromise').html('확인');
 				}else if(text == '확인'){					
 					formObj.attr("action", "/board/update");
-					formObj.attr("method", "get");
+					formObj.attr("method", "post");
 					formObj.submit();
 				}
 			});
@@ -36,36 +36,37 @@
 	</script>
 </head>
 <body>
-	<table border="1" style="text-align: center">
-		<thead>
-			<tr>
-				<td style="width: 300px; height: 100px;" colspan=3>
-					다짐
-				</td>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td style="width: 100px; height: 100px;" colspan=3>
-					<label for="seqno">번호</label>
-					<form name="readForm" role="form" method="post">
+	<form name="readForm" method="post">
+		<table border="1" style="text-align: center">
+			<thead>
+				<tr>
+					<td style="width: 300px; height: 100px;" colspan=3>
+						다짐
+					</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="width: 100px; height: 100px;" colspan=3>
+						<label for="seqno">번호</label>
 						<input type="text" id="seqno" name="seqno" value="${read.seqno}" readOnly/>
-					</form>
-				</td>
-			</tr>
-			<tr>
-				<td style="width: 100px; height: 100px;" colspan=3>
-					<label for="seqno">내용</label>
-					<input type="text" id="promise" name="promise" value="${read.promise}" readOnly/>
-				</td>
-			</tr>
-			<tr>
-				<td style="width: 100px; height: 100px;" colspan=3>
-					<label for="seqno">등록일</label> 
-					<fmt:formatDate value="${read.ins_dt}" pattern="yyyy-MM-dd" /></td>
-			</tr>
-		</tbody>
-	</table>
+					</td>
+				</tr>
+				<tr>
+					<td style="width: 100px; height: 100px;" colspan=3>
+						<label for="seqno">내용</label>
+						<input type="text" id="promise" name="promise" value="${read.promise}" readOnly/>
+					</td>
+				</tr>
+				<tr>
+					<td style="width: 100px; height: 100px;" colspan=3>
+						<label for="seqno">등록일</label>
+						<fmt:formatDate value="${read.ins_dt}" pattern="yyyy-MM-dd" />
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
 	<div>
 		<button type="submit" id="list" class="list">목록</button>	
 		<button type="submit" id="uptPromise" class="update">수정</button>

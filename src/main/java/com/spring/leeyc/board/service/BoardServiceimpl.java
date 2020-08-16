@@ -41,4 +41,10 @@ public class BoardServiceimpl implements BoardService {
 		boardDao.delPromise(seqno);
 	}
 
+	// 다짐 수정
+	@Override
+	public void uptPromise(BoardVO boardVO) throws Exception {
+		boardDao.uptPromise(boardVO);
+	}
+
 }

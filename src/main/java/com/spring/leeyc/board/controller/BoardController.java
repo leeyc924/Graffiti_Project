@@ -66,10 +66,10 @@ public class BoardController {
 	}
 	
 	// 다짐 수정
-//	@RequestMapping(value = "/board/delete", method = RequestMethod.POST)
-//	public String uptPromise(BoardVO boardVO) throws Exception{
-//		logger.info("update");
-//		service.uptPromise(boardVO);
-//		return "redirect:/board/readView";
-//	}
+	@RequestMapping(value = "/board/update", method = RequestMethod.POST)
+	public String uptPromise(BoardVO boardVO) throws Exception{
+		logger.info("update");
+		service.uptPromise(boardVO);
+		return "redirect:/board/readView";
+	}
 }

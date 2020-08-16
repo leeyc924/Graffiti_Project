@@ -46,4 +46,14 @@
     	WHERE
     		seqno = #{seqno}
     </delete>
+    
+    <!-- 다짐 수정 -->
+    <update id="uptPromise" parameterType ="com.spring.leeyc.board.vo.BoardVO">
+    	UPDATE promise_note
+    	SET
+    		promise = #{promise},
+    		upt_dt = CURDATE()
+    	WHERE
+    		seqno = #{seqno}
+    </update>
 </mapper>

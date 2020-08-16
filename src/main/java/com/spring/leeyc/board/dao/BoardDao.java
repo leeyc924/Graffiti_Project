@@ -22,5 +22,7 @@ public interface BoardDao {
 	
 	// 다짐 삭제
 	public void delPromise(int seqno) throws Exception;
-
+	
+	// 다짐 등록
+	public void uptPromise(BoardVO boradVO) throws Exception;
 }
