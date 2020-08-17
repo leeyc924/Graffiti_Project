@@ -32,6 +32,9 @@
 					formObj.submit();
 				}
 			});
+			$("#listPromise").click(function(){
+				$(location).attr('href','/board/list');
+			});
 		});
 	</script>
 </head>
@@ -68,7 +71,7 @@
 		</table>
 	</form>
 	<div>
-		<button type="submit" id="list" class="list">목록</button>	
+		<button type="submit" id="listPromise" class="list">목록</button>	
 		<button type="submit" id="uptPromise" class="update">수정</button>
 		<button type="submit" id="delPromise" class="delete">삭제</button>
 	</div>		
